@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+
+
+
+/* -------------------------------
+-------------------navbar-nav-menu start */
+
+.menu-container {
+    display: flex;
+    width: calc(100% - 80px);
+    margin: 0px auto;
+}
+
+.navbar-nav-menu li a {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.navbar-nav-menu li a:hover {
+    color: #FFF;
+}
+
+.menu-button {
+    background-color: #F8BC00;
+    color: #262A45;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 27px;
+    /* 150% */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 50px;
+}
+
+@media (max-width:768px) {
+    .menu-button {
+        display: none;
+    }
+
+}
+
+
+/* -------------------------------
+-------------------navbar-nav-menu end */
+
+
+
+/* -------------------------------
+-------------------main section */
+
+.content-section h4 {
+    color: #262A45;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.content-section h6 {
+    color: #EC691D;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18.587px;
+    /* 132.766% */
+    margin-bottom: -5px;
+}
+
+.under-line {
+    color: #EC691D;
+}
+
+.content-section input {
+    width: 100%;
+}
+
+.content-section input[type=text] {
+    border: none;
+    outline: none;
+    color: #666;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 142.857% */
+    padding: 5px;
+}
+
+.text-input-fields {
+    border-radius: 6px;
+    border: 0.6px solid #CACACA;
+    display: flex;
+    padding: 5px;
+}
+.text-input-fields h6{
+    color: #666;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 142.857% */
+    margin-top: 6px;
+}
+
+.swap-btn{
+    cursor: pointer;
+}
+
+/* -------------------------------
+-------------------main section end */
