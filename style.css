@@ -380,6 +380,13 @@ input[type="range"]::-webkit-slider-thumb {
     color: #666666 !important;
     border: 2px solid #666666 !important;
 }
+.buttons-below button:nth-child(1) a{
+    color: #666666 !important;
+}
+.buttons-below button:nth-child(2) a{
+    
+    color: #FFF;
+}
 
 
 /* map */
