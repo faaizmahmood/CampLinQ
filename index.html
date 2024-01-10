@@ -128,12 +128,12 @@
 
     <div class="container-fluid main-section">
 
-        <div class="row">
-            <div class="col-3 content-section p-0">
+        <div class="row main-section-col-reverse">
+            <div class="col-md-3 col-12 content-section p-0">
                 <div class="ps-3">
                     <h4 class="mt-3">Route Planner</h4>
 
-                    <div class="mt-4">
+                    <div class="mt-4" style="margin-bottom: -10px;">
                         <h6 class="">Filter</h6>
                         <i class="fa-light fa-horizontal-rule under-line"></i>
                     </div>
@@ -148,7 +148,7 @@
                         <input type="text" id="source" name="source">
                         <i class="fa-regular fa-arrows-to-dot mt-2 me-1"></i>
                     </div>
-                    <div class=" text-center my-3">
+                    <div class=" text-center my-2">
                         <i class="fa-regular fa-arrow-up-arrow-down swap-btn" onclick="swap_content()"></i>
                     </div>
                     <div class="text-input-fields">
@@ -156,15 +156,69 @@
                         <input type="text" id="destination" name="destination">
                         <i class="fa-regular fa-arrows-to-dot mt-2 me-1"></i>
                     </div>
+
+                    <div class="new-fields" id="new-fields">
+                        <div class="text-input-fields mt-3">
+                            <h6> Stop:</h6>
+                            <input type="text" id="new-field-1" name="new-field-1">
+                            <i class="fa-regular fa-arrows-to-dot mt-2 me-1"></i>
+                        </div>
+
+                        <div class="text-input-fields mt-3">
+                            <h6> Stop:</h6>
+                            <input type="text" id="new-field-2" name="new-field-2">
+                            <i class="fa-regular fa-arrows-to-dot mt-2 me-1"></i>
+                        </div>
+                    </div>
+
+                    <div class="setting-stop-button mt-2">
+                        <h5 style="color: #1379FF; cursor: pointer;" onclick="add_new_fields()">Add Extra Stop</h5>
+                        <h5 style="cursor: pointer;">Route settings</h5>
+                    </div>
                 </div>
 
+                <hr>
+
+                <div class="px-3 check-boxes-section" id="check-boxes-section">
+
+                    <h5>Avoid</h5>
+
+                    <div class="check-boxes">
+                        <input type="checkbox" id="Highways" name="Highways" value="Highways">
+                        <label for="Ferries">Highways</label><br>
+                        <input type="checkbox" id="Tools" name="Tools" value="Tools">
+                        <label for="Ferries">Tools</label><br>
+                        <input type="checkbox" id="Ferries" name="Ferries" value="Ferries">
+                        <label for="Ferries">Ferries</label><br><br>
+                    </div>
+
+                </div>
+
+
+                <div class="set-date px-3 py-4" id="set-date">
+
+                    <h5>Travel Dates</h5>
+
+                    <div class="d-flex mt-4">
+                        <input type="date" id="set-date-1" name="set-date-1" placeholder="Date from" class="me-2">
+                        <input type="date" id="set-date-2" name="set-date-2" placeholder="Date to" class="me-2">
+                    </div>
+
+                    <div class="note-text mt-3 ">
+                        <p>*Date would be set according to your timezone</p>
+                    </div>
+
+                </div>
 
             </div>
 
 
 
-            <div class="col-9 map-section">
-
+            <div class="col-md-9 col-12 map-section p-0">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13633.652002216384!2d74.37099999052026!3d31.31996538718261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919a8b96acc8637%3A0xdbb4a544112a214e!2sCentral%20Park%20Housing%20Scheme%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1704859712982!5m2!1sen!2s"
+                    width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
 
