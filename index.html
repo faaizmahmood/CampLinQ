@@ -122,10 +122,10 @@
 
     <!-- -------------------------main section----------------------- -->
 
-    <div class="container-fluid main-section">
+    <div class="container-fluid main-section position-relative">
 
         <div class="row main-section-col-reverse">
-            <div class="col-md-3 col-sm-6 col-9 content-section p-0">
+            <div class="col-md-3 col-sm-6 col-9 content-section p-0" id="filter">
                 <div class="ps-3">
                     <h4 class="mt-3">Route Planner</h4>
 
@@ -250,26 +250,31 @@
                 </div>
 
 
-                
+
                 <div class="accommodation-plan px-3 py-4 mt-3" id="set-date">
 
                     <h5>Resting/accommodation plan</h5>
 
                     <div class="d-flex align-items-center">
-                        <p class="mt-3">Plan at least </p><input type="text" class="text-inputs mx-2" placeholder="3"> <p class="mt-3">stops on whole trip. </p>
+                        <p class="mt-3">Plan at least </p><input type="text" class="text-inputs mx-2" placeholder="3">
+                        <p class="mt-3">stops on whole trip. </p>
                     </div>
                     <div class="d-flex align-items-center">
-                        <p class="mt-3">Plan to take a rest break every </p><input type="text" class="text-inputs mx-2" placeholder="3"> <p class="mt-3">hours.</p>
+                        <p class="mt-3">Plan to take a rest break every </p><input type="text" class="text-inputs mx-2"
+                            placeholder="3">
+                        <p class="mt-3">hours.</p>
                     </div>
                     <div class="d-flex align-items-center">
                         <p class="mt-3">Seek Accomodation within a maximum distance of</p>
                     </div>
                     <div class="d-flex align-items-center">
-                        <input type="text" class="text-inputs mx-2" placeholder="3"> <p class="mt-3">km from the main route.</p>
+                        <input type="text" class="text-inputs mx-2" placeholder="3">
+                        <p class="mt-3">km from the main route.</p>
                     </div>
 
                     <div class="note-text mt-3 ">
-                        <p>The resting plan may vary depending on road conditions an accommodation stops opening hours!</p>
+                        <p>The resting plan may vary depending on road conditions an accommodation stops opening hours!
+                        </p>
                     </div>
 
                 </div>
@@ -279,7 +284,7 @@
 
                     <div class="d-flex justify-content-end">
                         <button><a href="" class="text-decoration-none">Cancel</a></button>
-                        <button><a href="" class="text-decoration-none">Show Results</a></button>
+                        <button id="show-results" onclick="show_resuts()">Show Results</button>
                     </div>
 
                 </div>
@@ -296,9 +301,273 @@
             </div>
         </div>
 
+
+
+
+
+        <!-- Routes and accommodation -->
+
+
+        <div class="row" id="Routes-and-accommodation">
+            <div class="col-md-3 col-sm-6 col-9 content-section-Routes-and-accommodation p-0">
+                <div class="px-3">
+                    <h4 class="mt-3">Route Planner</h4>
+
+                    <div class="mt-4 d-flex justify-content-between" style="margin-bottom: -10px;">
+                        <div>
+                            <h6 class="">Routes and accommodation</h6>
+                            <i class="fa-light fa-horizontal-rule under-line"></i>
+                        </div>
+                        <div>
+                            <i class="fa-regular fa-bars-filter " style="cursor: pointer;" onclick="return_filter()"></i>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+
+                <div class="px-3">
+
+                    <div class="d-flex justify-content-between direction-desider-header">
+                        <div class="d-flex">
+                            <img src="./assets/images&videos/truck.png" alt="..." class="truck-img">
+                            <h6 class="ms-2" style="color: #262A45;">Over A3 road</h6>
+                        </div>
+                        <div>
+                            <div style="color: #188038; cursor: pointer;" class="d-flex time-desider">
+                                <h6 style="color: #188038;">10 ur 32 minutes</h6>
+                                <i class="fa-solid fa-angle-right ms-2 "></i>
+                            </div>
+                            <h6 style="color: #666666;">(1015 km)</h6>
+
+                        </div>
+                    </div>
+
+                    <div class="planed-stops mt-5">
+
+                        <h5>Planed 3 stops :</h5>
+
+                        <div class="d-flex mt-4">
+                            <img src="./assets/images&videos/Planed-stops-images.png" alt="..."
+                                class="planed-stops-img mt-1">
+                            <div class="ms-2">
+                                <h6 style="color: black;">Ferienhof de Slaaphoeve</h6>
+                                <div class="ratings d-flex mt-1">
+                                    <div class="d-flex mt-1 stars">
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-sharp-half-stroke"></i>
+                                    </div>
+                                    <p class="ms-3" style="color: #666666;">238</p>
+                                </div>
+                                <p style="color: #666666;" class="location-address">Emlichhiem, Germany</p>
+
+                                <div class="d-flex justify-content-between" style="margin-top: -10px;">
+                                    <h6 style="color:black;">12,5€</h6>
+                                    <a href="" style="margin-top: -5px;"><button class="planed-stops-btn">BOOK
+                                            NOW</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex mt-4">
+                            <img src="./assets/images&videos/Planed-stops-images.png" alt="..."
+                                class="planed-stops-img mt-1">
+                            <div class="ms-2">
+                                <h6 style="color: black;">Ferienhof de Slaaphoeve</h6>
+                                <div class="ratings d-flex mt-1">
+                                    <div class="d-flex mt-1 stars">
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-sharp-half-stroke"></i>
+                                    </div>
+                                    <p class="ms-3" style="color: #666666;">238</p>
+                                </div>
+                                <p style="color: #666666;" class="location-address">Emlichhiem, Germany</p>
+
+                                <div class="d-flex justify-content-between" style="margin-top: -10px;">
+                                    <h6 style="color:black;">12,5€</h6>
+                                    <a href="" style="margin-top: -5px;"><button class="planed-stops-btn">BOOK
+                                            NOW</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex mt-4">
+                            <img src="./assets/images&videos/Planed-stops-images.png" alt="..."
+                                class="planed-stops-img mt-1">
+                            <div class="ms-2">
+                                <h6 style="color: black;">Ferienhof de Slaaphoeve</h6>
+                                <div class="ratings d-flex mt-1">
+                                    <div class="d-flex mt-1 stars">
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-sharp-half-stroke"></i>
+                                    </div>
+                                    <p class="ms-3" style="color: #666666;">238</p>
+                                </div>
+                                <p style="color: #666666;" class="location-address">Emlichhiem, Germany</p>
+
+                                <div class="d-flex justify-content-between" style="margin-top: -10px;">
+                                    <h6 style="color:black;">12,5€</h6>
+                                    <a href="" style="margin-top: -5px;"><button class="planed-stops-btn">BOOK
+                                            NOW</button></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="send-direction-to-mobile d-flex justify-content-end mt-4" style="cursor: pointer;">
+                            <div class="d-flex mt-1">
+                                <h3>Send directions to your phone</h3>
+                                <i class="fa-solid fa-angle-right mx-2 "></i>
+                            </div>
+                            <img src="./assets/images&videos/phone.png" alt="..." class="phone-img">
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <hr>
+
+
+                <!-- Over A1 road -->
+
+                <div class="px-3">
+
+                    <div class="d-flex justify-content-between direction-desider-header">
+                        <div class="d-flex">
+                            <img src="./assets/images&videos/truck.png" alt="..." class="truck-img">
+                            <h6 class="ms-2" style="color: #262A45;">Over A1 road</h6>
+                        </div>
+                        <div>
+                            <div style="color: #188038; cursor: pointer;" class="d-flex time-desider">
+                                <h6 style="color: #188038;">9 ur 55 minutes</h6>
+                                <i class="fa-solid fa-angle-right ms-2 "></i>
+                            </div>
+                            <h6 style="color: #666666;">(950 km)</h6>
+
+                        </div>
+                    </div>
+
+                    <div class="planed-stops mt-5">
+
+                        <h5>Planed 3 stops :</h5>
+
+                        <div class="d-flex mt-4">
+                            <img src="./assets/images&videos/Planed-stops-images.png" alt="..."
+                                class="planed-stops-img mt-1">
+                            <div class="ms-2">
+                                <h6 style="color: black;">Ferienhof de Slaaphoeve</h6>
+                                <div class="ratings d-flex mt-1">
+                                    <div class="d-flex mt-1 stars">
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-sharp-half-stroke"></i>
+                                    </div>
+                                    <p class="ms-3" style="color: #666666;">238</p>
+                                </div>
+                                <p style="color: #666666;" class="location-address">Emlichhiem, Germany</p>
+
+                                <div class="d-flex justify-content-between" style="margin-top: -10px;">
+                                    <h6 style="color:black;">12,5€</h6>
+                                    <a href="" style="margin-top: -5px;"><button class="planed-stops-btn">BOOK
+                                            NOW</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex mt-4">
+                            <img src="./assets/images&videos/Planed-stops-images.png" alt="..."
+                                class="planed-stops-img mt-1">
+                            <div class="ms-2">
+                                <h6 style="color: black;">Ferienhof de Slaaphoeve</h6>
+                                <div class="ratings d-flex mt-1">
+                                    <div class="d-flex mt-1 stars">
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-sharp-half-stroke"></i>
+                                    </div>
+                                    <p class="ms-3" style="color: #666666;">238</p>
+                                </div>
+                                <p style="color: #666666;" class="location-address">Emlichhiem, Germany</p>
+
+                                <div class="d-flex justify-content-between" style="margin-top: -10px;">
+                                    <h6 style="color:black;">12,5€</h6>
+                                    <a href="" style="margin-top: -5px;"><button class="planed-stops-btn">BOOK
+                                            NOW</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex mt-4">
+                            <img src="./assets/images&videos/Planed-stops-images.png" alt="..."
+                                class="planed-stops-img mt-1">
+                            <div class="ms-2">
+                                <h6 style="color: black;">Ferienhof de Slaaphoeve</h6>
+                                <div class="ratings d-flex mt-1">
+                                    <div class="d-flex mt-1 stars">
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-sharp-half-stroke"></i>
+                                    </div>
+                                    <p class="ms-3" style="color: #666666;">238</p>
+                                </div>
+                                <p style="color: #666666;" class="location-address">Emlichhiem, Germany</p>
+
+                                <div class="d-flex justify-content-between" style="margin-top: -10px;">
+                                    <h6 style="color:black;">12,5€</h6>
+                                    <a href="" style="margin-top: -5px;"><button class="planed-stops-btn">BOOK
+                                            NOW</button></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="send-direction-to-mobile d-flex justify-content-end mt-4 mb-3" style="cursor: pointer;">
+                            <div class="d-flex mt-1">
+                                <h3>Send directions to your phone</h3>
+                                <i class="fa-solid fa-angle-right mx-2 "></i>
+                            </div>
+                            <img src="./assets/images&videos/phone.png" alt="..." class="phone-img">
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Routes and accommodation -->
+
+
+
     </div>
 
     <!-- -------------------------main section end----------------------- -->
+
+
+
+    <div class="container-fluid main-section">
+
+
+
+    </div>
+
 
 
     <!-- script -->

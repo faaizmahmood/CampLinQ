@@ -29,3 +29,21 @@ function add_new_fields(){
 }
 
 
+
+//-------------------  #Routes-and-accommodation .content-section-Routes-and-accommodation
+
+function show_resuts(){
+    let Routes_and_accommodation = document.querySelector('#Routes-and-accommodation .content-section-Routes-and-accommodation');
+    Routes_and_accommodation.style.left = "0px";
+
+}
+
+
+
+//  ----------------    return_filter()
+
+function return_filter()
+{
+    let Routes_and_accommodation = document.querySelector('#Routes-and-accommodation .content-section-Routes-and-accommodation');
+    Routes_and_accommodation.style.left = "-400px";
+}

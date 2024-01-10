@@ -374,17 +374,19 @@ input[type="range"]::-webkit-slider-thumb {
     background-color: #EC691D;
 }
 
-.buttons-below button:nth-child(1){
+.buttons-below button:nth-child(1) {
     margin-right: 15px;
     background-color: transparent !important;
     color: #666666 !important;
     border: 2px solid #666666 !important;
 }
-.buttons-below button:nth-child(1) a{
+
+.buttons-below button:nth-child(1) a {
     color: #666666 !important;
 }
-.buttons-below button:nth-child(2) a{
-    
+
+.buttons-below button:nth-child(2) a {
+
     color: #FFF;
 }
 
@@ -412,6 +414,100 @@ input[type="range"]::-webkit-slider-thumb {
     }
 
 }
+
+
+/* --------------------
+--------------Routes and accommodation */
+
+
+
+/* direction-deside-header */
+
+.direction-desider-header .time-desider i {
+
+    margin-top: 2px;
+
+}
+
+.truck-img{
+    width: 19.898px;
+height: 20px;
+}
+
+.planed-stops h5 {
+    color: #262A45;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18.587px;
+    /* 116.17% */
+}
+
+.stars i {
+    color: yellow;
+    width: 10px;
+    margin: 0px 3px;
+}
+
+.ratings p,
+.location-address {
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.location-address {
+    margin-top: -17px;
+}
+
+.planed-stops-img {
+    width: 81px;
+    height: 71px;
+    flex-shrink: 0;
+}
+
+.planed-stops-btn {
+    font-size: 10px;
+    border: none;
+    outline: none;
+    background-color: #EC691D;
+    border-radius: 20px;
+    padding: 2px 20px;
+    color: white;
+}
+
+
+.send-direction-to-mobile h3 {
+    color: #1A73E8;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18.587px;
+    /* 154.894% */
+}
+
+.send-direction-to-mobile i {
+    color: #1A73E8;
+    width: 10px;
+    height: 10px;
+}
+
+.phone-img {
+    width: 15px;
+    height: 23px;
+}
+
+
+/* Routes-and-accommodation position abso */
+
+#Routes-and-accommodation .content-section-Routes-and-accommodation{
+    /* margin-top: -400px;    */
+    position: absolute;
+    top: 0;
+    left: -400px;
+    background-color: rgb(255, 255, 255) !important;
+    transition: all 2s;
+}
+
 
 /* -------------------------------
 -------------------main section end */
