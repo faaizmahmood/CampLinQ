@@ -331,12 +331,11 @@ input[type="range"]::-webkit-slider-thumb {
 
 .accommodation-plan p {
     color: #666;
-
     font-feature-settings: 'clig' off, 'liga' off;
     font-size: 14px;
     font-style: normal;
+    line-height: 14px;
     font-weight: 400;
-    line-height: 24px;
     /* 171.429% */
     letter-spacing: -0.4px;
 }
