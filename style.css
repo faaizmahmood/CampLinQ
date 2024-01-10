@@ -455,6 +455,12 @@ height: 20px;
     margin-top: 3px;
 }
 
+@media (max-width:576px) {
+    .ratings{
+        margin-top: -10px !important;
+    }
+}
+
 .location-address {
     margin-top: -17px;
 }
