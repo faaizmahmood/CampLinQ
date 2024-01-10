@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="icon" type="image/x-icon" href="./assets/images/logo.png"> -->
+    <!-- <link rel="icon" type="image/x-icon" href="./assets/images&videos/logo.png"> -->
     <title>CampLinQ</title>
 
     <!-- ======css file===== -->
@@ -100,10 +100,6 @@
                             <a class="nav-link text-capitalize mx-4" href="#">Blog</a>
                         </li>
 
-
-
-
-
                     </ul>
 
                 </div>
@@ -158,13 +154,13 @@
                     </div>
 
                     <div class="new-fields" id="new-fields">
-                        <div class="text-input-fields mt-3">
+                        <div class="text-input-fields mt-2">
                             <h6> Stop:</h6>
                             <input type="text" id="new-field-1" name="new-field-1">
                             <i class="fa-regular fa-arrows-to-dot mt-2 me-1"></i>
                         </div>
 
-                        <div class="text-input-fields mt-3">
+                        <div class="text-input-fields mt-2">
                             <h6> Stop:</h6>
                             <input type="text" id="new-field-2" name="new-field-2">
                             <i class="fa-regular fa-arrows-to-dot mt-2 me-1"></i>
@@ -179,17 +175,25 @@
 
                 <hr>
 
-                <div class="px-3 check-boxes-section" id="check-boxes-section">
+                <div class="px-3 check-boxes-section mb-3" id="check-boxes-section">
 
                     <h5>Avoid</h5>
 
-                    <div class="check-boxes">
-                        <input type="checkbox" id="Highways" name="Highways" value="Highways">
-                        <label for="Ferries">Highways</label><br>
-                        <input type="checkbox" id="Tools" name="Tools" value="Tools">
-                        <label for="Ferries">Tools</label><br>
-                        <input type="checkbox" id="Ferries" name="Ferries" value="Ferries">
-                        <label for="Ferries">Ferries</label><br><br>
+                    <div class="check-boxes mt-3">
+                        <div>
+                            <input type="checkbox" id="Highways" name="Highways" value="Highways">
+                            <label for="Ferries">Highways</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="Tools" name="Tools" value="Tools">
+                            <label for="Ferries">Tools</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="Ferries" name="Ferries" value="Ferries">
+                            <label for="Ferries">Ferries</label>
+                        </div>
                     </div>
 
                 </div>
@@ -206,6 +210,63 @@
 
                     <div class="note-text mt-3 ">
                         <p>*Date would be set according to your timezone</p>
+                    </div>
+
+                </div>
+
+
+                <div class="px-3 check-boxes-section-2 mt-3" id="check-boxes-section">
+
+                    <h5>Accommodation / stay on road</h5>
+
+                    <div class="check-boxes-2 mt-3">
+                        <div class="d-flex">
+                            <input type="checkbox" id="Caravan-parks" name="Caravan-parks" value="Caravan-parks">
+                            <label for="Caravan-parks">Caravan parks</label>
+                        </div>
+
+                        <div class="d-flex ms-4">
+                            <input type="checkbox" id="Camps" name="Camps" value="Camps">
+                            <label for="Camps">Camps</label>
+                        </div>
+
+
+                    </div>
+
+                    <p class="mt-4 price-text">Daily Price for an Overnight Stay:</p>
+
+                    <div class="set-price" id="set-price">
+                        <div class="d-flex">
+                            <input type="text" id="set-price-1" name="set- price-1" placeholder=" price from"
+                                class="me-2">
+                            <input type="text" id="set-price-2" name="set- price-2" placeholder=" price to"
+                                class="me-2">
+                        </div>
+                    </div>
+
+                    <p class="mt-4 price-text">Show Accommodation Ratings from</p>
+                    <input type="range" class="range">
+
+                </div>
+
+
+                
+                <div class="accommodation-plan px-3 py-4 mt-3" id="set-date">
+
+                    <h5>Resting/accommodation plan</h5>
+
+                    <div class="d-flex align-items-center mt-4">
+                        <p class="mt-3">Plan at least </p><input type="text" class="text-inputs mx-2" placeholder="3"> <p class="mt-3">stops on whole trip. </p>
+                    </div>
+                    <div class="d-flex align-items-center mt-4">
+                        <p class="mt-3">Plan to take a rest break every </p><input type="text" class="text-inputs mx-2" placeholder="3"> <p class="mt-3">hours.</p>
+                    </div>
+                    <div class="d-flex align-items-center mt-4">
+                        <p class="mt-3">Seek Accomodation within a maximum distance of</p><input type="text" class="text-inputs mx-2" placeholder="3"> <p class="mt-3">km from the main route.</p>
+                    </div>
+
+                    <div class="note-text mt-3 ">
+                        <p>The resting plan may vary depending on road conditions an accommodation stops opening hours!</p>
                     </div>
 
                 </div>

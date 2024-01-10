@@ -165,7 +165,7 @@
     /* width: auto !important; */
     width: 14px !important;
     height: 14px;
-    margin-top: 3px;
+    margin-top: px;
     accent-color: #EC691D;
 }
 
@@ -176,9 +176,42 @@
     font-weight: 400;
     line-height: 20px;
     /* 142.857% */
+    margin-left: 5px;
+
 }
 
 
+/* check-boxes-2 */
+
+.check-boxes-2 {
+    display: flex;
+}
+
+.check-boxes-section-2 h5 {
+    color: #01223B;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    /* 142.857% */
+}
+
+.check-boxes-2 input {
+    /* width: auto !important; */
+    width: 14px !important;
+    height: 14px;
+    accent-color: #EC691D;
+    margin-top: 2px;
+}
+
+.check-boxes-2 label {
+    color: #666;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 142.857% */
+    margin-left: 5px;
+}
 
 
 /* set-date */
@@ -198,7 +231,7 @@
     background-color: #FAFAFA;
 }
 
-.set-date input{
+.set-date input {
     border: 0.6px solid #CACACA !important;
     border-radius: 6px;
     background: #FFF !important;
@@ -212,12 +245,13 @@
     padding: 10px 10px !important;
 }
 
-.note-text{
+.note-text {
     border-radius: 5px;
-background: #FBE7DB;
-padding: 5px 5px 0px 5px;
+    background: #FBE7DB;
+    padding: 5px 5px 0px 5px;
 }
-.note-text p{
+
+.note-text p {
     color: #4D4D4D;
     font-size: 10px;
     font-style: normal;
@@ -226,11 +260,109 @@ padding: 5px 5px 0px 5px;
     padding-bottom: 5px;
 }
 
+
+/* price-text */
+
+
+.price-text {
+    color: #666;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    /* 171.429% */
+    letter-spacing: -0.4px;
+    margin-bottom: 8px;
+}
+
+.set-price input {
+    border: 0.6px solid #CACACA !important;
+    border-radius: 6px;
+    background: #FFF !important;
+    outline: none !important;
+    color: #666 !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 142.857% */
+    padding: 10px 10px !important;
+
+}
+
+
+/* range */
+
+
+/* Styles for the range slider */
+input[type="range"] {
+    /* Set the background color */
+    background: linear-gradient(to right, #F8BC00 0%, #F8BC00 50%, #FAFAFA 50%, #FAFAFA 100%);
+    /* Remove default styles */
+    border: none;
+    outline: none;
+    /* Set the dimensions */
+    width: 100%;
+    height: 13px;
+    /* You can adjust the height as needed */
+    accent-color: #F8BC00;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    /* Set the color of the thumb */
+    background-color: white;
+    /* Set the dimensions of the thumb */
+
+    /* Remove default styles */
+    border: 7px solid #F8BC00;
+    padding: 5px;
+    outline: none;
+    /* Add some shadow or other styles if desired */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+
+
+.accommodation-plan {
+    border-bottom: 1px solid #ECEEF1;
+    border-top: 1px solid #ECEEF1;
+    background-color: #FAFAFA;
+}
+
+.accommodation-plan p {
+    color: #666;
+
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 171.429% */
+    letter-spacing: -0.4px;
+}
+
+
+.text-inputs {
+    width: 30px !important;
+    border-radius: 6px !important;
+    border: 1px solid #EC691D !important;
+    padding: 10px;
+    text-align: center;
+}
+
+.text-inputs::placeholder {
+    color: #000000;
+    opacity: 0.3;
+
+
+}
+
+
 /* map */
 
 .map-section iframe {
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 
