@@ -503,7 +503,7 @@ height: 20px;
     /* margin-top: -400px;    */
     position: absolute;
     top: 0;
-    left: -500px;
+    left: -1000px;
     background-color: rgb(255, 255, 255) !important;
     transition: all 2s;
 }

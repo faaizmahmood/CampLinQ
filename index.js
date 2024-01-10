@@ -37,11 +37,13 @@ function show_resuts(){
     Routes_and_accommodation.style.left = "0px";
 
 
-    if ($(window).width() <= 576 ) { 
+    if ($(window).width() <= 768 ) { 
 
         if(Routes_and_accommodation.style.display = "none"){
             Routes_and_accommodation.style.display = "block"
         }
+
+        Routes_and_accommodation.classList.add("col-12")
 
         let map_section = document.querySelector('#map-section');
         map_section.classList.remove("col-6");
@@ -71,10 +73,10 @@ map_section.style.height = "400px"
 function return_filter()
 {
     let Routes_and_accommodation = document.querySelector('#Routes-and-accommodation .content-section-Routes-and-accommodation');
-    Routes_and_accommodation.style.left = "-500px";
+    Routes_and_accommodation.style.left = "-1000px";
 
 
-    if ($(window).width() <= 576 ) {
+    if ($(window).width() <= 768 ) {
         Routes_and_accommodation.style.display = "none"
         
         let filter = document.querySelector('#filter');
