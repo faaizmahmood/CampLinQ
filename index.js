@@ -37,7 +37,7 @@ function show_resuts(){
     Routes_and_accommodation.style.left = "0px";
 
 
-    if ($(window).width() <= 768 ) { 
+    if ($(window).width() <= 767 ) { 
 
         if(Routes_and_accommodation.style.display = "none"){
             Routes_and_accommodation.style.display = "block"
@@ -76,7 +76,7 @@ function return_filter()
     Routes_and_accommodation.style.left = "-1000px";
 
 
-    if ($(window).width() <= 768 ) {
+    if ($(window).width() <= 767 ) {
         Routes_and_accommodation.style.display = "none"
         
         let filter = document.querySelector('#filter');
