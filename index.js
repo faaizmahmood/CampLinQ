@@ -34,7 +34,8 @@ function add_new_fields(){
 
 function show_resuts(){
     let Routes_and_accommodation = document.querySelector('#Routes-and-accommodation .content-section-Routes-and-accommodation');
-    Routes_and_accommodation.style.left = "0px";
+    // Routes_and_accommodation.style.left = "0px";
+    Routes_and_accommodation.style.display = "block";
 
 
     if ($(window).width() <= 767 ) { 
@@ -73,7 +74,8 @@ map_section.style.height = "400px"
 function return_filter()
 {
     let Routes_and_accommodation = document.querySelector('#Routes-and-accommodation .content-section-Routes-and-accommodation');
-    Routes_and_accommodation.style.left = "-1000px";
+    // Routes_and_accommodation.style.left = "-1000px";
+    Routes_and_accommodation.style.display = "none";
 
 
     if ($(window).width() <= 767 ) {
@@ -91,8 +93,29 @@ function return_filter()
 
 
 
-// ------------------------------ responsive
+// ------------------------------ range
 
 
 
 
+// const rangeInput = document.querySelectorAll(".range-input input"),
+// priceInput = document.querySelectorAll(".price-input input"),
+// range = document.querySelector(".slider .progress");
+// let priceGap = 1000;
+// priceInput.forEach(input =>{
+//     console.log("jghjgjh")
+//     input.addEventListener("input", e =>{
+//         let minPrice = parseInt(priceInput[0].value),
+//         maxPrice = parseInt(priceInput[1].value);
+        
+//         if((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max){
+//             if(e.target.className === "input-min"){
+//                 rangeInput[0].value = minPrice;
+//                 range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
+//             }else{
+//                 rangeInput[1].value = maxPrice;
+//                 range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+//             }
+//         }
+//     });
+// });
