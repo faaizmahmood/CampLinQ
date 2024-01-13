@@ -313,7 +313,7 @@
 
 .range-slider {
     position: relative;
-    width: 100%;
+    width: 89%;
     height: 10px;
     margin-top: 20px;
     background-color: #FAFAFA;
@@ -329,7 +329,7 @@
     border-radius: 50%;
     cursor: pointer;
     z-index: 2;
-    top: -6px;
+    top: -7px;
   }
 
   .thumb:last-child {
@@ -338,6 +338,9 @@
     background-color: #FAFAFA;
     /* margin-right: 10px; */
   }
+
+
+  /* accommodation */
 
 .accommodation-plan {
     border-bottom: 1px solid #ECEEF1;
@@ -383,6 +386,10 @@
     opacity: 0.3;
 
 
+}
+
+.resting-accommodation-text-para{
+    display:inline;
 }
 
 
