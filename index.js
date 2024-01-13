@@ -28,6 +28,11 @@ function add_new_fields(){
 
 }
 
+function remove_new_fields(){
+    let new_fields = document.querySelector("#new-fields");
+    new_fields.style.display = "none"
+}
+
 
 
 //-------------------  #Routes-and-accommodation .content-section-Routes-and-accommodation
@@ -97,25 +102,45 @@ function return_filter()
 
 
 
+const firstThumb = document.getElementById('firstThumb');
+const secondThumb = document.getElementById('secondThumb');
+const rangeSlider = document.querySelector('.range-slider');
 
-// const rangeInput = document.querySelectorAll(".range-input input"),
-// priceInput = document.querySelectorAll(".price-input input"),
-// range = document.querySelector(".slider .progress");
-// let priceGap = 1000;
-// priceInput.forEach(input =>{
-//     console.log("jghjgjh")
-//     input.addEventListener("input", e =>{
-//         let minPrice = parseInt(priceInput[0].value),
-//         maxPrice = parseInt(priceInput[1].value);
-        
-//         if((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max){
-//             if(e.target.className === "input-min"){
-//                 rangeInput[0].value = minPrice;
-//                 range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
-//             }else{
-//                 rangeInput[1].value = maxPrice;
-//                 range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
-//             }
-//         }
-//     });
-// });
+// Initial thumb positions
+let firstPosition = 0;
+let secondPosition = 100;
+
+// Update thumb positions based on user input
+function updateThumbs() {
+  firstThumb.style.left = `${firstPosition}%`;
+  secondThumb.style.left = `${secondPosition}%`;
+}
+
+// Event listeners for dragging thumbs
+firstThumb.addEventListener('mousedown', (event) => {
+  document.addEventListener('mousemove', handleMouseMoveFirst);
+  document.addEventListener('mouseup', () => {
+    document.removeEventListener('mousemove', handleMouseMoveFirst);
+  });
+});
+
+secondThumb.addEventListener('mousedown', (event) => {
+  document.addEventListener('mousemove', handleMouseMoveSecond);
+  document.addEventListener('mouseup', () => {
+    document.removeEventListener('mousemove', handleMouseMoveSecond);
+  });
+});
+
+// Update thumb position while dragging
+function handleMouseMoveFirst(event) {
+  firstPosition = Math.min(secondPosition, Math.max(0, (event.clientX - rangeSlider.getBoundingClientRect().left) / rangeSlider.offsetWidth * 100));
+  updateThumbs();
+}
+
+function handleMouseMoveSecond(event) {
+  secondPosition = Math.min(100, Math.max(firstPosition, (event.clientX - rangeSlider.getBoundingClientRect().left) / rangeSlider.offsetWidth * 100));
+  updateThumbs();
+}
+
+// Initial update
+updateThumbs();
