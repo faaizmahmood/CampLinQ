@@ -86,7 +86,7 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse ms-md-0 ms-2 mt-md-0 mt-3" id="navbarSupportedContent">
                     <ul class="navbar-nav navbar-nav-menu ms-auto mb-2 mb-lg-0 ">
                         <li class="nav-item">
                             <a class="nav-link text-capitalize mx-md-4" href="#">About Us</a>
@@ -101,12 +101,14 @@
                         </li>
 
                     </ul>
+                    <button type="button" class="ms-md-4 menu-button"><a class="nav-link text-capitalize"
+                            href="#">Campsite
+                            Owners JOIN</a>
+                    </button>
 
                 </div>
 
-                <button type="button" class="ms-4 menu-button"><a class="nav-link text-capitalize" href="#">Campsite
-                        Owners JOIN</a>
-                </button>
+
 
             </div>
 
@@ -125,7 +127,7 @@
     <div class="container-fluid main-section position-relative">
 
         <div class="row main-section-col-reverse">
-            <div class=" col-lg-3 col-md-5 col-9 content-section p-0" id="filter">
+            <div class="col-xxl-2 col-lg-3 col-md-5 col-9 content-section p-0" id="filter">
                 <div class="ps-3">
                     <h4 class="mt-3">Route Planner</h4>
 
@@ -160,7 +162,7 @@
                             <!-- <i class="fa-regular fa-arrows-to-dot mt-2 me-1"></i> -->
                             <i class="fa-solid fa-xmark mt-2 me-1 cross-mark" onclick="remove_new_fields()"></i>
                         </div>
-<!-- 
+                        <!-- 
                         <div class="text-input-fields mt-2">
                             <h6> Stop:</h6>
                             <input type="text" id="new-field-2" name="new-field-2">
@@ -258,7 +260,7 @@
                     <div class="range-slider px-5">
                         <div class="thumb" id="firstThumb"></div>
                         <div class="thumb" id="secondThumb"></div>
-                      </div>
+                    </div>
 
                 </div>
 
@@ -269,22 +271,23 @@
                     <h5>Resting/accommodation plan</h5>
 
                     <div class="resting-accommodation-text-para">
-                    <div class="d-flex align-items-center">
-                        <p class="mt-3">Plan at least </p><input type="text" class="text-inputs mx-2" placeholder="3">
-                        <p class="mt-3">stops on whole trip. </p> 
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <p class="mt-3">Plan to take a rest break every </p><input type="text" class="text-inputs mx-2"
-                            placeholder="3">
-                        <p class="mt-3">hours.</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <p class="mt-3">Seek Accomodation within a maximum distance of</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <input type="text" class="text-inputs mx-2" placeholder="3">
-                        <p class="mt-3">km from the main route.</p>
-                    </div>
+                        <div class="d-flex align-items-center">
+                            <p class="mt-3">Plan at least </p><input type="text" class="text-inputs mx-2"
+                                placeholder="3">
+                            <p class="mt-3">stops on whole trip. </p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <p class="mt-3">Plan to take a rest break every </p><input type="text"
+                                class="text-inputs mx-2" placeholder="3">
+                            <p class="mt-3">hours.</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <p class="mt-3">Seek Accomodation within a maximum distance of</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <input type="text" class="text-inputs mx-2" placeholder="3">
+                            <p class="mt-3">km from the main route.</p>
+                        </div>
 
                     </div>
 
@@ -309,7 +312,7 @@
 
 
 
-            <div class="col-lg-9 col-md-7 col-3 map-section p-0" id="map-section">
+            <div class="col-xxl-10 col-lg-9 col-md-7 col-3 map-section p-0" id="map-section">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13633.652002216384!2d74.37099999052026!3d31.31996538718261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919a8b96acc8637%3A0xdbb4a544112a214e!2sCentral%20Park%20Housing%20Scheme%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1704859712982!5m2!1sen!2s"
                     width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
@@ -325,7 +328,7 @@
 
 
         <div class="row" id="Routes-and-accommodation">
-            <div class="col-lg-3 col-md-5 col-9 content-section-Routes-and-accommodation p-0">
+            <div class="col-xxl-2 col-lg-3 col-md-5 col-9 content-section-Routes-and-accommodation p-0">
                 <div class="px-3">
                     <h4 class="mt-3">Route Planner</h4>
 
@@ -367,7 +370,7 @@
                         <div class="d-flex mt-4">
                             <img src="./assets/images&videos/Planed-stops-images.png" alt="..."
                                 class="planed-stops-img mt-1">
-                            <div class="ms-sm-2 ms-4">
+                            <div class="ms-sm-2 ms-4" style="width: 100%; position: relative;">
                                 <h6 style="color: black;">Ferienhof de Slaaphoeve</h6>
                                 <div class="ratings d-flex mt-1">
                                     <div class="d-flex mt-1 stars">
@@ -391,7 +394,7 @@
                         <div class="d-flex mt-4">
                             <img src="./assets/images&videos/Planed-stops-images.png" alt="..."
                                 class="planed-stops-img mt-1">
-                            <div class="ms-sm-2 ms-4">
+                            <div class="ms-sm-2 ms-4 " style="width: 100%; position: relative;">
                                 <h6 style="color: black;">Ferienhof de Slaaphoeve</h6>
                                 <div class="ratings d-flex mt-1">
                                     <div class="d-flex mt-1 stars">
@@ -415,7 +418,7 @@
                         <div class="d-flex mt-4">
                             <img src="./assets/images&videos/Planed-stops-images.png" alt="..."
                                 class="planed-stops-img mt-1">
-                            <div class="ms-sm-2 ms-4">
+                            <div class="ms-sm-2 ms-4" style="width: 100%; position: relative;">
                                 <h6 style="color: black;">Ferienhof de Slaaphoeve</h6>
                                 <div class="ratings d-flex mt-1">
                                     <div class="d-flex mt-1 stars">
@@ -480,7 +483,7 @@
                         <div class="d-flex mt-4">
                             <img src="./assets/images&videos/Planed-stops-images.png" alt="..."
                                 class="planed-stops-img mt-1">
-                            <div class="ms-sm-2 ms-4">
+                            <div class="ms-sm-2 ms-4"  style="width: 100%; position: relative;">
                                 <h6 style="color: black;">Ferienhof de Slaaphoeve</h6>
                                 <div class="ratings d-flex mt-1">
                                     <div class="d-flex mt-1 stars">
@@ -504,7 +507,7 @@
                         <div class="d-flex mt-4">
                             <img src="./assets/images&videos/Planed-stops-images.png" alt="..."
                                 class="planed-stops-img mt-1">
-                            <div class="ms-sm-2 ms-4">
+                            <div class="ms-sm-2 ms-4" style="width: 100%; position: relative;">
                                 <h6 style="color: black;">Ferienhof de Slaaphoeve</h6>
                                 <div class="ratings d-flex mt-1">
                                     <div class="d-flex mt-1 stars">
@@ -528,7 +531,7 @@
                         <div class="d-flex mt-4">
                             <img src="./assets/images&videos/Planed-stops-images.png" alt="..."
                                 class="planed-stops-img mt-1">
-                            <div class="ms-sm-2 ms-4">
+                            <div class="ms-sm-2 ms-4" style="width: 100%; position: relative;">
                                 <h6 style="color: black;">Ferienhof de Slaaphoeve</h6>
                                 <div class="ratings d-flex mt-1">
                                     <div class="d-flex mt-1 stars">

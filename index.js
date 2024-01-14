@@ -102,6 +102,50 @@ function return_filter()
 
 
 
+// const firstThumb = document.getElementById('firstThumb');
+// const secondThumb = document.getElementById('secondThumb');
+// const rangeSlider = document.querySelector('.range-slider');
+
+// // Initial thumb positions
+// let firstPosition = 0;
+// let secondPosition = 100;
+
+// // Update thumb positions based on user input
+// function updateThumbs() {
+//   firstThumb.style.left = `${firstPosition}%`;
+//   secondThumb.style.left = `${secondPosition}%`;
+// }
+
+// // Event listeners for dragging thumbs
+// firstThumb.addEventListener('mousedown', (event) => {
+//   document.addEventListener('mousemove', handleMouseMoveFirst);
+//   document.addEventListener('mouseup', () => {
+//     document.removeEventListener('mousemove', handleMouseMoveFirst);
+//   });
+// });
+
+// secondThumb.addEventListener('mousedown', (event) => {
+//   document.addEventListener('mousemove', handleMouseMoveSecond);
+//   document.addEventListener('mouseup', () => {
+//     document.removeEventListener('mousemove', handleMouseMoveSecond);
+//   });
+// });
+
+// // Update thumb position while dragging
+// function handleMouseMoveFirst(event) {
+//   firstPosition = Math.min(secondPosition, Math.max(0, (event.clientX - rangeSlider.getBoundingClientRect().left) / rangeSlider.offsetWidth * 100));
+//   updateThumbs();
+// }
+
+// function handleMouseMoveSecond(event) {
+//   secondPosition = Math.min(100, Math.max(firstPosition, (event.clientX - rangeSlider.getBoundingClientRect().left) / rangeSlider.offsetWidth * 100));
+//   updateThumbs();
+// }
+
+// // Initial update
+// updateThumbs();
+
+
 const firstThumb = document.getElementById('firstThumb');
 const secondThumb = document.getElementById('secondThumb');
 const rangeSlider = document.querySelector('.range-slider');
@@ -118,20 +162,37 @@ function updateThumbs() {
 
 // Event listeners for dragging thumbs
 firstThumb.addEventListener('mousedown', (event) => {
-  document.addEventListener('mousemove', handleMouseMoveFirst);
-  document.addEventListener('mouseup', () => {
-    document.removeEventListener('mousemove', handleMouseMoveFirst);
-  });
+  startDrag(handleMouseMoveFirst);
 });
 
 secondThumb.addEventListener('mousedown', (event) => {
-  document.addEventListener('mousemove', handleMouseMoveSecond);
-  document.addEventListener('mouseup', () => {
-    document.removeEventListener('mousemove', handleMouseMoveSecond);
-  });
+  startDrag(handleMouseMoveSecond);
 });
 
-// Update thumb position while dragging
+// Touch event listeners for dragging thumbs on mobile devices
+firstThumb.addEventListener('touchstart', (event) => {
+  startDrag((e) => handleTouchMove(e, handleMouseMoveFirst));
+});
+
+secondThumb.addEventListener('touchstart', (event) => {
+  startDrag((e) => handleTouchMove(e, handleMouseMoveSecond));
+});
+
+// Common function to start drag for both mouse and touch events
+function startDrag(moveHandler) {
+  document.addEventListener('mousemove', moveHandler);
+  document.addEventListener('touchmove', moveHandler, { passive: false });
+  document.addEventListener('mouseup', () => endDrag(moveHandler));
+  document.addEventListener('touchend', () => endDrag(moveHandler));
+}
+
+// Common function to end drag for both mouse and touch events
+function endDrag(moveHandler) {
+  document.removeEventListener('mousemove', moveHandler);
+  document.removeEventListener('touchmove', moveHandler);
+}
+
+// Update thumb position while dragging with mouse
 function handleMouseMoveFirst(event) {
   firstPosition = Math.min(secondPosition, Math.max(0, (event.clientX - rangeSlider.getBoundingClientRect().left) / rangeSlider.offsetWidth * 100));
   updateThumbs();
@@ -139,6 +200,21 @@ function handleMouseMoveFirst(event) {
 
 function handleMouseMoveSecond(event) {
   secondPosition = Math.min(100, Math.max(firstPosition, (event.clientX - rangeSlider.getBoundingClientRect().left) / rangeSlider.offsetWidth * 100));
+  updateThumbs();
+}
+
+// Update thumb position while dragging with touch
+function handleTouchMove(event, moveHandler) {
+  const touch = event.touches[0];
+  const touchX = touch.clientX - rangeSlider.getBoundingClientRect().left;
+  const touchPercentage = (touchX / rangeSlider.offsetWidth) * 100;
+  
+  if (moveHandler === handleMouseMoveFirst) {
+    firstPosition = Math.min(secondPosition, Math.max(0, touchPercentage));
+  } else if (moveHandler === handleMouseMoveSecond) {
+    secondPosition = Math.min(100, Math.max(firstPosition, touchPercentage));
+  }
+
   updateThumbs();
 }
 
