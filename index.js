@@ -101,51 +101,6 @@ function return_filter()
 // ------------------------------ range
 
 
-
-// const firstThumb = document.getElementById('firstThumb');
-// const secondThumb = document.getElementById('secondThumb');
-// const rangeSlider = document.querySelector('.range-slider');
-
-// // Initial thumb positions
-// let firstPosition = 0;
-// let secondPosition = 100;
-
-// // Update thumb positions based on user input
-// function updateThumbs() {
-//   firstThumb.style.left = `${firstPosition}%`;
-//   secondThumb.style.left = `${secondPosition}%`;
-// }
-
-// // Event listeners for dragging thumbs
-// firstThumb.addEventListener('mousedown', (event) => {
-//   document.addEventListener('mousemove', handleMouseMoveFirst);
-//   document.addEventListener('mouseup', () => {
-//     document.removeEventListener('mousemove', handleMouseMoveFirst);
-//   });
-// });
-
-// secondThumb.addEventListener('mousedown', (event) => {
-//   document.addEventListener('mousemove', handleMouseMoveSecond);
-//   document.addEventListener('mouseup', () => {
-//     document.removeEventListener('mousemove', handleMouseMoveSecond);
-//   });
-// });
-
-// // Update thumb position while dragging
-// function handleMouseMoveFirst(event) {
-//   firstPosition = Math.min(secondPosition, Math.max(0, (event.clientX - rangeSlider.getBoundingClientRect().left) / rangeSlider.offsetWidth * 100));
-//   updateThumbs();
-// }
-
-// function handleMouseMoveSecond(event) {
-//   secondPosition = Math.min(100, Math.max(firstPosition, (event.clientX - rangeSlider.getBoundingClientRect().left) / rangeSlider.offsetWidth * 100));
-//   updateThumbs();
-// }
-
-// // Initial update
-// updateThumbs();
-
-
 const firstThumb = document.getElementById('firstThumb');
 const secondThumb = document.getElementById('secondThumb');
 const rangeSlider = document.querySelector('.range-slider');
@@ -220,3 +175,27 @@ function handleTouchMove(event, moveHandler) {
 
 // Initial update
 updateThumbs();
+
+
+
+//   resize func
+
+
+function reize_func(){
+
+  if ($(window).width() >= 767 ){
+
+    let filter = document.querySelector('#filter');
+    let Routes_and_accommodation = document.querySelector('#Routes-and-accommodation .content-section-Routes-and-accommodation');
+    let map_section = document.querySelector('#map-section');
+    filter.style.display = "block"
+    Routes_and_accommodation.style.position = "absolute"
+    map_section.style.height = "revert-layer"
+
+
+
+
+
+  }
+
+}
